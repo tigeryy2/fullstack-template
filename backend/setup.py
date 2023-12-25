@@ -20,10 +20,10 @@ from setuptools import find_packages, setup
 HERE = pathlib.Path(__file__).parent
 
 VERSION = "0.1.0"
-PACKAGE_NAME = "python-template"
+PACKAGE_NAME = "fullstack-template"
 AUTHOR = "Tiger Yang"
 AUTHOR_EMAIL = "tigeryyang@gmail.com"
-DESCRIPTION = "python-template"
+DESCRIPTION = "fullstack-template backend"
 LONG_DESCRIPTION = (HERE / "README.md").read_text()
 LONG_DESC_TYPE = "text/markdown"
 
