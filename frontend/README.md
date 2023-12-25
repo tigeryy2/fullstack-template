@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 To create a new project using this template, run:
 
 ```bash
-npx create-next-app --example https://github.com/tigeryy2/nextjs-template.git <YOUR_APP_NAME>
+npx create-next-app --example "https://github.com/tigeryy2/nextjs-template" <YOUR_APP_NAME>
 ```
 
 ## Getting Started
