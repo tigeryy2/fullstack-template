@@ -1,0 +1,55 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# Test python 3.9 as this is the latest supported on Vercel's Python Serverless Functions
+name: Build and Test Python 3.9 on Linux
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'frontend/backend/**'
+      - 'frontend/Pipfile'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v4
+      
+    - name: Check formatting with Black
+      uses: psf/black@stable
+      with:
+        options: "--check"
+        version: "~=24.3"
+        
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.9"
+        cache: 'pipenv'
+        
+    - name: Install pipenv
+      run: |
+        python -m pip install --upgrade pipenv
+        
+    - name: Run tests with dependencies
+      run: |
+        export PYTHONPATH="$PWD/backend:$PYTHONPATH"
+        export PIPENV_PYTHON=$pythonLocation/bin/python
+        pipenv install --dev
+        pipenv install pytest-md-report --dev
+        pipenv run pytest --md-report --md-report-flavor gfm --md-report-output md_report.md
+        cat md_report.md >> $GITHUB_STEP_SUMMARY
+        
