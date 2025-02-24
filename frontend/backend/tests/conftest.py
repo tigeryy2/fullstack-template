@@ -1,9 +1,9 @@
 import pytest
-
-from logs import LOGS_DIR
 from python_template import DOTENV_FILE
 from python_template.utils.loggable import Loggable
 from python_template.utils.utils import dotenv_file_exists
+
+from logs import LOGS_DIR
 
 
 @pytest.fixture(scope="session", autouse=True)

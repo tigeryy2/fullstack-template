@@ -1,4 +1,4 @@
-name: Build and Test Python 3.12 on Linux
+name: Build and Test Python on Linux
 
 on:
   push:

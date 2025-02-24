@@ -2,7 +2,6 @@ import tempfile
 from pathlib import Path
 
 import pytest
-
 from python_template.utils.utils import change_dir, dotenv_file_exists, get_env
 
 
