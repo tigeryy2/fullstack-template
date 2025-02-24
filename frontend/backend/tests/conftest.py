@@ -1,8 +1,8 @@
 import pytest
-from python_template import DOTENV_FILE
-from python_template.utils.loggable import Loggable
-from python_template.utils.utils import dotenv_file_exists
 
+from fullstack_template import DOTENV_FILE
+from fullstack_template.utils.loggable import Loggable
+from fullstack_template.utils.utils import dotenv_file_exists
 from logs import LOGS_DIR
 
 

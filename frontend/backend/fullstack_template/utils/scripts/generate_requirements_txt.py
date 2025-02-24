@@ -5,9 +5,8 @@ Updates the requirements.txt file(s) with the latest dependencies.
 import subprocess
 from pathlib import Path
 
-from python_template.utils.loggable import Loggable
-from python_template.utils.utils import change_dir
-
+from fullstack_template.utils.loggable import Loggable
+from fullstack_template.utils.utils import change_dir
 from logs import LOGS_DIR
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent.resolve()

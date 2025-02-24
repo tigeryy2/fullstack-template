@@ -112,6 +112,81 @@ wheels = [
 ]
 
 [[package]]
+name = "fullstack-template"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "python-dotenv" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "black" },
+    { name = "cfgv" },
+    { name = "click" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "coverage" },
+    { name = "distlib" },
+    { name = "filelock" },
+    { name = "identify" },
+    { name = "iniconfig" },
+    { name = "jinja2" },
+    { name = "markupsafe" },
+    { name = "mypy-extensions" },
+    { name = "nodeenv" },
+    { name = "packaging" },
+    { name = "pathspec" },
+    { name = "platformdirs" },
+    { name = "pluggy" },
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-html" },
+    { name = "pytest-metadata" },
+    { name = "pyyaml" },
+    { name = "ruff" },
+    { name = "setuptools" },
+    { name = "uv" },
+    { name = "virtualenv" },
+    { name = "wheel" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "python-dotenv", specifier = "==1.0.1" }]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "black", specifier = "==24.10.0" },
+    { name = "cfgv", specifier = "==3.4.0" },
+    { name = "click", specifier = "==8.1.8" },
+    { name = "colorama", marker = "sys_platform == 'win32'", specifier = "==0.4.6" },
+    { name = "coverage", specifier = "==7.6.10" },
+    { name = "distlib", specifier = "==0.3.9" },
+    { name = "filelock", specifier = "==3.16.1" },
+    { name = "identify", specifier = "==2.6.5" },
+    { name = "iniconfig", specifier = "==2.0.0" },
+    { name = "jinja2", specifier = "==3.1.5" },
+    { name = "markupsafe", specifier = "==3.0.2" },
+    { name = "mypy-extensions", specifier = "==1.0.0" },
+    { name = "nodeenv", specifier = "==1.9.1" },
+    { name = "packaging", specifier = "==24.2" },
+    { name = "pathspec", specifier = "==0.12.1" },
+    { name = "platformdirs", specifier = "==4.3.6" },
+    { name = "pluggy", specifier = "==1.5.0" },
+    { name = "pre-commit", specifier = "==4.0.1" },
+    { name = "pytest", specifier = "==8.3.4" },
+    { name = "pytest-cov", specifier = "==6.0.0" },
+    { name = "pytest-html", specifier = "==4.1.1" },
+    { name = "pytest-metadata", specifier = "==3.1.1" },
+    { name = "pyyaml", specifier = "==6.0.2" },
+    { name = "ruff", specifier = "==0.8.6" },
+    { name = "setuptools", specifier = "==75.6.0" },
+    { name = "uv", specifier = "==0.5.14" },
+    { name = "virtualenv", specifier = "==20.28.1" },
+    { name = "wheel", specifier = "==0.45.1" },
+]
+
+[[package]]
 name = "identify"
 version = "2.6.5"
 source = { registry = "https://pypi.org/simple" }
@@ -310,83 +385,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/bc/57/e84d88dfe0aec03b7a2d4327012c1627ab5f03652216c63d49846d7a6c58/python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca", size = 39115 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/6a/3e/b68c118422ec867fa7ab88444e1274aa40681c606d59ac27de5a5588f082/python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a", size = 19863 },
-]
-
-[[package]]
-name = "python-template"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "python-dotenv" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "black" },
-    { name = "cfgv" },
-    { name = "click" },
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "coverage" },
-    { name = "distlib" },
-    { name = "filelock" },
-    { name = "identify" },
-    { name = "iniconfig" },
-    { name = "jinja2" },
-    { name = "markupsafe" },
-    { name = "mypy-extensions" },
-    { name = "nodeenv" },
-    { name = "packaging" },
-    { name = "pathspec" },
-    { name = "platformdirs" },
-    { name = "pluggy" },
-    { name = "pre-commit" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-html" },
-    { name = "pytest-metadata" },
-    { name = "python-template" },
-    { name = "pyyaml" },
-    { name = "ruff" },
-    { name = "setuptools" },
-    { name = "uv" },
-    { name = "virtualenv" },
-    { name = "wheel" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "python-dotenv", specifier = "==1.0.1" }]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "black", specifier = "==24.10.0" },
-    { name = "cfgv", specifier = "==3.4.0" },
-    { name = "click", specifier = "==8.1.8" },
-    { name = "colorama", marker = "sys_platform == 'win32'", specifier = "==0.4.6" },
-    { name = "coverage", specifier = "==7.6.10" },
-    { name = "distlib", specifier = "==0.3.9" },
-    { name = "filelock", specifier = "==3.16.1" },
-    { name = "identify", specifier = "==2.6.5" },
-    { name = "iniconfig", specifier = "==2.0.0" },
-    { name = "jinja2", specifier = "==3.1.5" },
-    { name = "markupsafe", specifier = "==3.0.2" },
-    { name = "mypy-extensions", specifier = "==1.0.0" },
-    { name = "nodeenv", specifier = "==1.9.1" },
-    { name = "packaging", specifier = "==24.2" },
-    { name = "pathspec", specifier = "==0.12.1" },
-    { name = "platformdirs", specifier = "==4.3.6" },
-    { name = "pluggy", specifier = "==1.5.0" },
-    { name = "pre-commit", specifier = "==4.0.1" },
-    { name = "pytest", specifier = "==8.3.4" },
-    { name = "pytest-cov", specifier = "==6.0.0" },
-    { name = "pytest-html", specifier = "==4.1.1" },
-    { name = "pytest-metadata", specifier = "==3.1.1" },
-    { name = "python-template", editable = "." },
-    { name = "pyyaml", specifier = "==6.0.2" },
-    { name = "ruff", specifier = "==0.8.6" },
-    { name = "setuptools", specifier = "==75.6.0" },
-    { name = "uv", specifier = "==0.5.14" },
-    { name = "virtualenv", specifier = "==20.28.1" },
-    { name = "wheel", specifier = "==0.45.1" },
 ]
 
 [[package]]

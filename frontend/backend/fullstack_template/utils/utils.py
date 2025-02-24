@@ -9,8 +9,9 @@ from contextlib import contextmanager
 from pathlib import Path
 
 from dotenv import load_dotenv
-from python_template import DOTENV_FILE
-from python_template.utils.loggable import Loggable
+
+from fullstack_template import DOTENV_FILE
+from fullstack_template.utils.loggable import Loggable
 
 
 @contextmanager
