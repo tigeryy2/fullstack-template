@@ -1,8 +1,8 @@
 import pytest
+
 from backend import DOTENV_FILE
 from backend.utils.loggable import Loggable
 from backend.utils.utils import dotenv_file_exists
-
 from logs import LOGS_DIR
 
 

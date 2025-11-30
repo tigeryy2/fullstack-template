@@ -9,6 +9,7 @@ from contextlib import contextmanager
 from pathlib import Path
 
 from dotenv import load_dotenv
+
 from backend import DOTENV_FILE
 from backend.utils.loggable import Loggable
 
