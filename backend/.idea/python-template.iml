@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../frontend/backend/fullstack-template" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../frontend/backend/tests" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 virtualenv at ~/Documents/dev/fullstack/fullstack-template/frontend/backend/.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 virtualenv at ~/Documents/dev/fullstack-template/backend/.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

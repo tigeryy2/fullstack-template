@@ -2,7 +2,7 @@ import tempfile
 from pathlib import Path
 
 import pytest
-from fullstack_template.utils.utils import change_dir, dotenv_file_exists, get_env
+from backend.utils.utils import change_dir, dotenv_file_exists, get_env
 
 
 def test_change_dir_succeeds():

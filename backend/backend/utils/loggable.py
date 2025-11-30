@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 
@@ -9,6 +10,23 @@ class Loggable:
     """
 
     _logger: logging.Logger | None = None
+
+    @staticmethod
+    def setup_logs(log_path: str | Path) -> None:
+        path = Path(log_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Configure root logger to write to file
+        file_handler = logging.FileHandler(path)
+        formatter = logging.Formatter(
+            "[%(asctime)s] [%(name)s] [%(levelname)s] %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+        )
+        file_handler.setFormatter(formatter)
+
+        root_logger = logging.getLogger()
+        root_logger.setLevel(logging.INFO)
+        root_logger.addHandler(file_handler)
 
     @classmethod
     def log(cls) -> logging.Logger:
