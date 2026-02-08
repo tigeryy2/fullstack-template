@@ -3,6 +3,7 @@
 Reference docs for recurring workflows and project context.
 
 ## Contents
+- `list_kb.py` - helper script to list knowledge-base articles by tag match, usefulness, and recency.
 - `fastapi_dependency_usage.md` – FastAPI dependency patterns.
 - `frontend_visual_snapshot_workflow.md` – Playwright + Storybook snapshot workflow.
 - `frontend_snapshot_tests_when_to_use_and_how_to_run.md` – decision guide and command quickstart for frontend snapshots.
